@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+</head>
+<body>
+  <main>
+    <form onsubmit="enviarinformacoes(event)">
+        <div class="campo-label">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" placeholder="Digite seu email">
+
+        </div>
+        
+        <div class="campo-label">
+            <label for="senha">senha:</label>
+            <input id="senha" type="password" name="senha" placeholder="Digite sua senha">
+            
+        </div>
+        <button>Entrar</button>
+    </form>
+  </main>
+</body>
+<script>
+    javascript
+    let email = document.getElementById("email");
+    let senha = document.getElementById("senha");
+
+    function enviarinformacoes(event){
+        let emailDigitado = email.value;
+        let senhaDigitado = senha.value;
+
+
+        console.log(emailDigitado);
+        console.log(senhaDigitada);
+
+
+        event.preventDefault();
+
+        
+    }
+</script>
+<style>
+    body{
+        background-color:#dddd;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+    }
+
+    form{
+        background-color: rgb(16, 105, 167);
+        width: 40%;
+        height: 40%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 8px;
+
+    
+    }
+
+    campo-label{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+    }
+
+    label{
+        color:white;
+        font-size: 80%;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    input{
+        width: 100%;
+        height: 20%;
+        border-radius: 8%;
+        border: none;
+        margin-top: 8px;
+        font-size: 12px;
+        padding: 8px;
+
+    }
+
+    button{
+        background-color:rgb(94, 184, 249);
+        width: 20%;
+        height: 10%;
+        border: none;
+        border-radius: 30px;
+        cursor:pointer;
+        color:white;
+        font-weight:bold;
+        font-size: 15px;
+        margin: 2%;
+
+    }
+
+</style>
+</html>
